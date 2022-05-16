@@ -1,24 +1,24 @@
 # ubicandonos desde  un angulo que no sea 90 grados
 
 def caratula():
-    #mensaje
+    #mensaje en pantalla 
     print("\nUNIVERSIDAD DE LAS FUERZAS ARMADAS ESPE \n\n" +
     "viembenido, clacularas la hipotenusa de un triangulo rectangulo.\n autor: edison arambulo\n curso: POO, 2do 'a'")
 
 
 def hipotenusa(datOp, datAdya):
-    # calcular la hipotenusa con la formula de pitagoras
+    # calcular la hipotenusa con la formula de pitagoras (utiliza str)
     return(str((datOp**2 + datAdya**2)**1/2))
 
 def cateto():
-    #calculo de cateto
+    #calculo de cateto (utiliza str)
     hipotenusa = int(input("ingrese la hipotenusa: "))
     dat = int(input("ingrese el cateteto: "))
     print("el valor del cateto es: " + str((hipotenusa**2 - dat**2)**1/2))
 
 caratula()
 #menu de 4 pociones   %%%
-while True:
+while True: # repetir infinita veses, con el exit() de la opcion salir termina.
     #presentaar en pantalla el menu disponible (4 opciones)
     print('\n------- eliga opcion ----------')
     print('op 1: calculo de hipotenusa.')
