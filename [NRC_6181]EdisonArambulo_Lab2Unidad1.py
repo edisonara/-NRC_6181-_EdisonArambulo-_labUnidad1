@@ -12,3 +12,4 @@ caratula()
 catetOpDato = int(input("ingrese el cateto opuesto: "))
 catetAdDato = int(input("ingrese el cateteto adyasente: "))
 print("la hipotenusa del triangulo es: " + str(hipotenusa(catetOpDato, catetAdDato)))
+#modificacion  adicional, no va a quedar asi
