@@ -17,7 +17,9 @@ def cateto():
     print("el valor del cateto es: " + str((hipotenusa**2 - dat**2)**1/2))
 
 caratula()
+#menu de 4 pociones   %%%
 while True:
+    #presentaar en pantalla el menu disponible (4 opciones)
     print('\n------- eliga opcion ----------')
     print('op 1: calculo de hipotenusa.')
     print('op 2: calculo de cateto opuesto.')
@@ -28,11 +30,14 @@ while True:
         catetOpDato = int(input("ingrese el cateto opuesto: "))
         catetAdDato = int(input("ingrese el cateteto adyasente: "))
         print("la hipotenusa es: " + hipotenusa(catetOpDato,catetAdDato))
+
     elif opMenu==2:
+        #repite el mismo proceso con opcion 3
         cateto()  
     elif opMenu==3:
         cateto()
     elif opMenu==4:
+        #salir con exit()
         print('usted salio mi pana ;) ')
         exit()
     else:
