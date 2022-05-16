@@ -1,15 +1,40 @@
 # ubicandonos desde  un angulo que no sea 90 grados
+
 def caratula():
     #mensaje
-    print("UNIVERSIDAD DE LAS FUERZAS ARMADAS ESPE \n" +"viembenido, clacularas la hipotenusa de un triangulo rectangulo.\n autor: edison arambulo\n curso: POO, 2do 'a'")
+    print("\nUNIVERSIDAD DE LAS FUERZAS ARMADAS ESPE \n\n" +
+    "viembenido, clacularas la hipotenusa de un triangulo rectangulo.\n autor: edison arambulo\n curso: POO, 2do 'a'")
 
 
 def hipotenusa(datOp, datAdya):
     # calcular la hipotenusa con la formula de pitagoras
-    return((datOp**2 + datAdya**2)**1/2)
+    return(str((datOp**2 + datAdya**2)**1/2))
+
+def cateto():
+    #calculo de cateto
+    hipotenusa = int(input("ingrese la hipotenusa: "))
+    dat = int(input("ingrese el cateteto: "))
+    print("el valor del cateto es: " + str((hipotenusa**2 - dat**2)**1/2))
 
 caratula()
-catetOpDato = int(input("ingrese el cateto opuesto: "))
-catetAdDato = int(input("ingrese el cateteto adyasente: "))
-print("la hipotenusa del triangulo es: " + str(hipotenusa(catetOpDato, catetAdDato)))
-#modificacion  adicional, no va a quedar asi
+while True:
+    print('\n------- eliga opcion ----------')
+    print('op 1: calculo de hipotenusa.')
+    print('op 2: calculo de cateto opuesto.')
+    print('op 3: calculo de cateto adyasente.')
+    print('op 4: salir.')
+    opMenu = int(input('la opcion es? : '))
+    if opMenu==1:
+        catetOpDato = int(input("ingrese el cateto opuesto: "))
+        catetAdDato = int(input("ingrese el cateteto adyasente: "))
+        print("la hipotenusa es: " + hipotenusa(catetOpDato,catetAdDato))
+    elif opMenu==2:
+        cateto()  
+    elif opMenu==3:
+        cateto()
+    elif opMenu==4:
+        print('usted salio mi pana ;) ')
+        exit()
+    else:
+        print('error ;)')
+
