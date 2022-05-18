@@ -1,21 +1,21 @@
 # ubicandonos desde  un angulo que no sea 90 grados
-
 def caratula():
     #mensaje en pantalla 
     print("\nUNIVERSIDAD DE LAS FUERZAS ARMADAS ESPE \n\n" +
-    "viembenido, clacularas la hipotenusa de un triangulo rectangulo.\n autor: edison arambulo\n curso: POO, 2do 'a'")
-
-
+    "viembenido, calcularas los tres lados de un triangulo rectangulo.\n autor: edison arambulo\n curso: POO, 2do 'a'")
+    
+    
 def hipotenusa(datOp, datAdya):
     # calcular la hipotenusa con la formula de pitagoras (utiliza str)
-    return(str((datOp**2 + datAdya**2)**1/2))
+    return(str((datOp**2 + datAdya**2)**(1/2)))
+
 
 def cateto():
     #calculo de cateto (utiliza str)
-    hipotenusa = int(input("ingrese la hipotenusa: "))
-    dat = int(input("ingrese el cateteto: "))
-    print("el valor del cateto es: " + str((hipotenusa**2 - dat**2)**1/2))
-
+    hipotenusa = float(input("ingrese la hipotenusa: "))
+    dat = float(input("ingrese el cateteto: "))
+    print("el valor del cateto es: " + str((hipotenusa**2 - dat**2)**(1/2)))
+    
 caratula()
 #menu de 4 pociones   %%%
 while True: # repetir infinita veses, con el exit() de la opcion salir termina.
@@ -26,11 +26,11 @@ while True: # repetir infinita veses, con el exit() de la opcion salir termina.
     print('op 3: calculo de cateto adyasente.')
     print('op 4: salir.')
     opMenu = int(input('la opcion es? : '))
-    if opMenu==1:
-        catetOpDato = int(input("ingrese el cateto opuesto: "))
-        catetAdDato = int(input("ingrese el cateteto adyasente: "))
-        print("la hipotenusa es: " + hipotenusa(catetOpDato,catetAdDato))
 
+    if opMenu==1:
+        catetOpDato = float(input("ingrese el cateto opuesto: "))
+        catetAdDato = float(input("ingrese el cateteto adyasente: "))
+        print("la hipotenusa es: " + hipotenusa(catetOpDato,catetAdDato))
     elif opMenu==2:
         #repite el mismo proceso con opcion 3
         cateto()  
@@ -42,4 +42,4 @@ while True: # repetir infinita veses, con el exit() de la opcion salir termina.
         exit()
     else:
         print('error ;)')
-
+# parece que es final
